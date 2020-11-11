@@ -1,0 +1,13 @@
+<div style="background-color:#cccccc; margin: auto;">
+{% for product in products %}
+{% set modDiv = product.id % 4 %}
+  {% if modDiv == 1 %} <div style="padding: 10px; display: flex"> {% endif %}
+  <div style="padding: 10px; border: 1px solid black; text-align: center; margin: 5px; width: 100px">
+    <h3>{{ product.name }}</h3>
+    <div>Rs. {{ product.price }}</div> 
+    <div><a href="{{ path('store_payments_checkout', {id : product.id}) }}" style="text-decoration:none;"> Buy Now </a></div>
+    </div>
+  {% if modDiv == 0 %} </div> {% endif %}
+{% endfor %}
+</div>
+

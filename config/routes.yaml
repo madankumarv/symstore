@@ -1,0 +1,15 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+store_products_list:
+    path: /products/list
+    controller: App\Controller\StoreController::listProducts
+    
+store_payments_checkout:
+    path: /product/{id}/payments/checkout
+    controller: App\Controller\StoreController::checkoutPayments
+    
+store_payments_success:
+    path: /payments/success
+    controller: App\Controller\StoreController::successMessage
